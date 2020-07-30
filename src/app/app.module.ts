@@ -7,6 +7,8 @@ import {FormsModule} from '@angular/forms'; // To be able to use ngModule
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { SuccessComponent } from './success/success.component';
+import { WarningComponent } from './warning/warning.component';
 
 // Register your component in the @NgModule, b/c Angular doesn't scan your files
 // to know which components exist, hence register them in declarations array
@@ -14,7 +16,9 @@ import { ServersComponent } from './servers/servers.component';
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent  // TS doesn't know what this means, that's why you have to import above
+    ServersComponent,
+    SuccessComponent,
+    WarningComponent  // TS doesn't know what this means, that's why you have to import above
   ],
   imports: [
     BrowserModule,
