@@ -1,3 +1,35 @@
+<label style="color:yellow;">Server Name</label>
+<!-- Example of event binding and using reserved word $event to send event data
+  <input
+  type="text"
+  class='form-control'
+  (input)="onUpdateServerName($event)"> -->
+
+<!-- Example of 2 way binding -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName"
+>
+
+<br>
+<p [innerText]="serverName"
+  style=color:navajowhite;></p>
+
+  <!-- Example of event binding -->
+<button class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+
+
+<!--attribute syntax is solely understood by Angular,
+and expects to on the LHS a TS expression in quotations,
+Below is example of property binding -->
+
+<p [innerText]="serverCreationStatus"
+  style="color:yellowgreen;"></p>
+<br>
+<br>
 <app-server></app-server>
 
 
